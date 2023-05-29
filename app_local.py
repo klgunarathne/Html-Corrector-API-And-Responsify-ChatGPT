@@ -1,26 +1,19 @@
 import datetime
+from flask import Flask, request, jsonify
+from bs4 import BeautifulSoup
 from dotenv import load_dotenv
-from flask import Flask, jsonify, make_response, request
 from get_completion_langchain import get_completion_langchain
-
+from get_completion_openapi import get_completion_openai
 from helper.cluster_html_and_css import clusterHTMLCSSCode
+import time
+
+from helper.clustoer_html_code import clusterHTMLCode
 from helper.write_to_css_file import write_to_css_file
 from helper.write_to_html_file import write_to_html_file
-
 
 load_dotenv()
 
 app = Flask(__name__)
-
-
-@app.route("/")
-def hello_from_root():
-    return jsonify(message='Hello from root!')
-
-
-@app.route("/hello")
-def hello():
-    return jsonify(message='Hello from path!')
 
 @app.route('/upload', methods=['POST'])
 def upload_files():
@@ -31,7 +24,7 @@ def upload_files():
         html_content = html_file.read().decode('utf-8')
         css_content = css_file.read().decode('utf-8')
         
-        clusters = clusterHTMLCSSCode(html_content, css_content) if len(clusterHTMLCSSCode(html_content, css_content)) > 0 else []
+        clusters = clusterHTMLCSSCode(html_content, css_content) if len(clusterHTMLCode(html_content, css_content)) > 0 else []
         
         # get completions
         lstResponse_html = []
@@ -46,8 +39,8 @@ def upload_files():
             lstResponse_css.append(ai_response_css)
         
             # write_to_html_file(html.unescape(response), 'test.html')
-            # write_to_html_file(ai_response_html, 'test.html')
-            # write_to_css_file(ai_response_css, 'test.css')
+            write_to_html_file(ai_response_html, 'test.html')
+            write_to_css_file(ai_response_css, 'test.css')
             end_time = datetime.datetime.now()
             execution_time = (end_time - start_time).total_seconds()
             total_execution_time += execution_time
@@ -62,7 +55,5 @@ def upload_files():
         # return jsonify(clusters=clusters, noOfClusters=len(clusters))
         return jsonify(html=lstResponse_html, css=lstResponse_css, noOfClusters=len(clusters))
 
-
-@app.errorhandler(404)
-def resource_not_found(e):
-    return make_response(jsonify(error='Not found!'), 404)
+if __name__ == '__main__':
+    app.run(debug=True)

@@ -1,0 +1,91 @@
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('PacaembuBlack.eot');
+    src: url('PacaembuBlack.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuBlack.woff2') format('woff2'),
+        url('PacaembuBlack.woff') format('woff'),
+        url('PacaembuBlack.ttf') format('truetype'),
+        url('PacaembuBlack.svg#PacaembuBlack') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('PacaembuMedium.eot');
+    src: url('PacaembuMedium.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuMedium.woff2') format('woff2'),
+        url('PacaembuMedium.woff') format('woff'),
+        url('PacaembuMedium.ttf') format('truetype'),
+        url('PacaembuMedium.svg#PacaembuMedium') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('PacaembuLight.eot');
+    src: url('PacaembuLight.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuLight.woff2') format('woff2'),
+        url('PacaembuLight.woff') format('woff'),
+        url('PacaembuLight.ttf') format('truetype'),
+        url('PacaembuLight.svg#PacaembuLight') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('PacaembuBold.eot');
+    src: url('PacaembuBold.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuBold.woff2') format('woff2'),
+        url('PacaembuBold.woff') format('woff'),
+        url('PacaembuBold.ttf') format('truetype'),
+        url('PacaembuBold.svg#PacaembuBold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('PacaembuThin.eot');
+    src: url('PacaembuThin.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuThin.woff2') format('woff2'),
+        url('PacaembuThin.woff') format('woff'),
+        url('PacaembuThin.ttf') format('truetype'),
+        url('PacaembuThin.svg#PacaembuThin') format('svg');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pacaembu Ultra';
+    src: url('PacaembuUltra.eot');
+    src: url('PacaembuUltra.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuUltra.woff2') format('woff2'),
+        url('PacaembuUltra.woff') format('woff'),
+        url('PacaembuUltra.ttf') format('truetype'),
+        url('PacaembuUltra.svg#PacaembuUltra') format('svg');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pacaembu';
+    src: url('PacaembuRegular.eot');
+    src: url('PacaembuRegular.eot?#iefix') format('embedded-opentype'),
+        url('PacaembuRegular.woff2') format('woff2'),
+        url('PacaembuRegular.woff') format('woff'),
+        url('PacaembuRegular.ttf') format('truetype'),
+        url('PacaembuRegular.svg#PacaembuRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
